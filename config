@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "hanmei"]
+	url = https://github.com/tianjinhm/hanmei.git
+	fetch = +refs/heads/*:refs/remotes/hanmei/*
+[gui]
+	wmstate = normal
+	geometry = 1061x507+586+220 233 255
