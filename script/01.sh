@@ -10,7 +10,5 @@
 # CHANGELOG
 #   * Han Mei <108357120@qq.com>
 #   - build release
-rm -rf /root/hanmei >> /dev/null 2>&1
 cd /root
-git clone https://github.com/tianjinhm/hanmei.git
 kubectl create namespace app-team1
