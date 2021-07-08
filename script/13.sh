@@ -14,6 +14,7 @@
 apt install -y nfs-kernel-server
 rm -rf /nfs
 mkdir /nfs
+chmod 777 /nfs
 cat <<EOF > /etc/exports
 /nfs/ *(rw,sync,no_root_squash)  
 EOF
