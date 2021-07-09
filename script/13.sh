@@ -24,7 +24,7 @@ systemctl restart nfs-kernel-server
 sed -i "44i\    - --feature-gates=RemoveSelfLink=false" /etc/kubernetes/manifests/kube-apiserver.yaml 
 cd ~/hanmei/storageclass
 sleep 60
-sed -i 's/10.10.10.60/192.168.137.11/g' deployment.yaml
+sed -i 's/10.10.10.60/192.168.0.10/g' deployment.yaml
 sed -i 's/\/ifs\/kubernetes/\/nfs/g' deployment.yaml
 sed -i "4c \  name: csi-hostpath-sc" class.yaml
 sed -i "7a \allowVolumeExpansion: true" class.yaml
