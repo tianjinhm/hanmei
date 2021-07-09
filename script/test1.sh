@@ -14,7 +14,7 @@
 SCORE=0
 kubectl describe rolebindings -n app-team1 | tr -d "\n"  > exam01.txt
 kubectl describe clusterrole deployment-clusterrole | tr -d "\n"  >> exam01.txt
-flag010=`cat exam01.txt | grep cicd-tpassen | grep  daemonsets | grep deployments | grep statefulsets | grep create | wc -l`
+flag010=`cat exam01.txt | grep cicd | grep  daemonsets | grep deployments | grep statefulsets | grep create | wc -l`
 if [ $flag010 -ne 0 ] ; then
         SCORE=$(expr $SCORE + 4 )
     echo '1 pass'
@@ -30,7 +30,7 @@ else
     echo '2 error'
 fi
 exam030=`kubectl get nodes`
-flag030=`echo $exam030 | grep '1.20.1' | wc -l`
+flag030=`echo $exam030 | grep '1.21.1' | wc -l`
 if [ $flag030 -ne 0 ] ; then
         SCORE=$(expr $SCORE + 7 )
     echo '3 pass'
